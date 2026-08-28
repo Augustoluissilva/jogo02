@@ -46,6 +46,13 @@ if(media >= 7){
     alert(`O aluno está de reprovado com ${media.toFixed(1)} de media`);
 }
 //21. Verifique se um ano é bissexto.
+let solicitarAno = parseInt(prompt('Insira algum ano para descobrir se ele é bissexto:'));
+
+if(solicitarAno % 4 ==0){
+    console.log(`O ano ${solicitarAno} é bissexto`);
+}else{
+    console.log(`O ano ${solicitarAno} não é bissexto`);
+}
 //22. Verifique se um número está entre 10 e 50.
 let numero = parseInt(prompt('Digite um número:'));
 if(numero >= 10 &&  numero <= 50){
@@ -92,5 +99,16 @@ if(idade >= 16){
     console.log(`${nome} não pode votar, pois não tem a idade minima para votar!`);
 }
 //29. Determine o IMC e informe a classificação (Abaixo do peso, Ideal, Sobrepeso, etc).
+let solicitarPeso = parseFloat(prompt('Insira o seu peso:'));
+let solicitarAltura = parseFloat(prompt('Insira a sua altura:'));
+
+let calcularImc = solicitarPeso / (solicitarAltura ** 2);
+if(calcularImc < 18.5){
+    alert(`Abaixo do peso ideal com ${calcularImc.toFixed(2)}`);
+}else if(calcularImc >= 18.5 && calcularImc <= 24.9){
+    alert(`Peso ideal com ${calcularImc.toFixed(2)}`);
+}else{
+    alert(`Acima do ideal com ${calcularImc.toFixed(2)}`);
+}
 //30. Verifique se 3 lados fornecidos podem formar um triângulo.
 
