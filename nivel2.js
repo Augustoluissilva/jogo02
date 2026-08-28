@@ -65,9 +65,32 @@ if(solicitaUser == user && solicitaSenha == senha){
     alert('Acesso negado!');
 }
 //24. Receba o valor de uma compra e aplique 15% de desconto apenas se o valor for maior que R$ 100.
+let valorCompra = parseFloat(prompt('Insira o valor total da sua compra:'));
+let desconto = 0.15;
+if(valorCompra >100.00){
+    let descontoCompra = valorCompra * desconto;
+    let valorFinal = valorCompra - descontoCompra;
+    console.log(`O preço que você vai pagar com 15% de desconto é de  R$ ${valorFinal.toFixed(2)} reais`);
+}else{
+    console.log(`A sua compra deu o total de R$ ${valorCompra.toFixed(2)} reais`);
+}
 //25. Receba um caractere e diga se é uma vogal ou consoante.
+let solicitarCaractere = prompt('Digite uma letra:').toLowerCase();
+if(solicitarCaractere == 'a'|| solicitarCaractere == 'e' || solicitarCaractere == 'i' || solicitarCaractere == 'o' || solicitarCaractere == 'u'){
+    console.log(`A letra ${solicitarCaractere} é uma vogal.`);
+}else{
+    console.log(`A letra ${solicitarCaractere} é uma cosoante.`);
+}
 //26. Crie uma calculadora simples usando switch/case para as 4 operações básicas.
 //27. Receba 3 números e mostre-os em ordem crescente.
 //28. Verifique se uma pessoa pode votar (idade maior ou igual a 16).
+let nome = prompt('Insira seu nome:');
+let idade = parseInt(prompt('insira a sua idade:'));
+if(idade >= 16){
+    console.log(`${nome} pode votar!`);
+}else{
+    console.log(`${nome} não pode votar, pois não tem a idade minima para votar!`);
+}
 //29. Determine o IMC e informe a classificação (Abaixo do peso, Ideal, Sobrepeso, etc).
 //30. Verifique se 3 lados fornecidos podem formar um triângulo.
+
