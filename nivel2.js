@@ -89,6 +89,34 @@ if(solicitarCaractere == 'a'|| solicitarCaractere == 'e' || solicitarCaractere =
     console.log(`A letra ${solicitarCaractere} é uma cosoante.`);
 }
 //26. Crie uma calculadora simples usando switch/case para as 4 operações básicas.
+let solicitarN1 = parseFloat(prompt('Digite um número qualquer:'));
+let operacao = prompt('Digite a operação (+, -, *, /):');
+let solicitarN2 = parseFloat(prompt('Digite um segundo número qualquer:'));
+
+let resultado;
+
+switch(operacao){
+    case '+':
+        resultado = solicitarN1 + solicitarN2;
+    break;
+
+    case '-':
+        resultado = solicitarN1 - solicitarN2;
+    break;
+
+    case '*':
+        resultado = solicitarN1 * solicitarN2;
+    break;
+
+    case '/':
+        resultado = solicitarN1 / solicitarN2;
+    break;
+
+    default:
+        resultado = 'Operação inválida!';
+    break;
+}
+alert(`O resultado desta operação é ${resultado}`);
 //27. Receba 3 números e mostre-os em ordem crescente.
 //28. Verifique se uma pessoa pode votar (idade maior ou igual a 16).
 let nome = prompt('Insira seu nome:');
