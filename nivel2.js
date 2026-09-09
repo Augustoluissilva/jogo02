@@ -118,6 +118,24 @@ switch(operacao){
 }
 alert(`O resultado desta operação é ${resultado}`);
 //27. Receba 3 números e mostre-os em ordem crescente.
+let a = parseInt(prompt('Insira o primeiro número'));
+let b = parseInt(prompt('Insira o segundo número'));
+let c = parseInt(prompt('Insira o terceiro número'));
+if(a < b && b < c){
+    alert(`A ordem crescente entre os números é:  ${a}, ${b}, ${c}`);
+}else if(a < c && c < b){
+    alert(`A ordem crescente entre os números é:  ${a}, ${c}, ${b}`);
+}else if(b < a && a < c){
+     alert(`A ordem crescente entre os números é:  ${b}, ${a}, ${c}`);
+}else if(b < c && c < a){
+    alert(`A ordem crescente entre os números é:  ${b}, ${c}, ${a}`);
+}else if(c < a && a < b){
+    alert(`A ordem crescente entre os números é:  ${c}, ${a}, ${b}`);
+}else if(c < b && b < a){
+     alert(`A ordem crescente entre os números é:  ${c}, ${b}, ${a}`);
+}else{
+    alert("Existem números iguais ou valores inválidos na digitação.");
+}
 //28. Verifique se uma pessoa pode votar (idade maior ou igual a 16).
 let nome = prompt('Insira seu nome:');
 let idade = parseInt(prompt('insira a sua idade:'));
@@ -139,4 +157,14 @@ if(calcularImc < 18.5){
     alert(`Acima do ideal com ${calcularImc.toFixed(2)}`);
 }
 //30. Verifique se 3 lados fornecidos podem formar um triângulo.
+let lado1 = parseInt(prompt('Insira o valor do primeiro lado:'));
+let lado2 = parseInt(prompt('Insira o valor do segundo lado:'));
+let lado3 = parseInt(prompt('Insira o valor do terceiro lado:'));
+
+if((lado1 + lado2) > lado3 && (lado1 + lado3) > lado2 && (lado2 + lado3) > lado1){
+    alert(`Os valores informados formam um triangulo.`);
+}else{
+    alert(`Os valores não formam um triangulo, tente novamente.`);
+}
+
 
