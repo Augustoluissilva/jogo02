@@ -44,8 +44,8 @@ alert(`A área do círculo é ${circulo.toFixed(2)}`);
 let cotacao = 5.12;
 let solicitarReais = parseFloat(prompt('Informe o valor que deseja fazer a conversão de Reais para Dolar:'));
 let valorDolar = calcularDolar(cotacao, solicitarReais);
-function calcularDolar(dolar, real){
-    return solicitarReais / cotacao;
+function calcularDolar(cotacaoMoeda, valorReais){
+    return valorReais / cotacaoMoeda;
 }
 alert(`O valor da cotação é de ${valorDolar.toFixed(2)}`);
 //37. Crie uma função que receba 3 notas e retorne a média.
@@ -66,10 +66,69 @@ function calcularDataDeNascimento(idade, ano){
 }
 alert(`Você nasceu em ${nascimento}`);
 //39. Crie uma função que receba uma string e retorne a quantidade de caracteres dela (length).
-
+let solicitarTexto = prompt('escreva uma palavra:');
+let caracteres = quantidadeDeCaracteres (solicitarTexto);
+function quantidadeDeCaracteres(texto){
+    return texto.length//length serve para descobrir o tamanho de uma sequencia, como a quantidade de letras que tem uma palvra ou o tamanho  de um array.
+}
+alert(`A quantidade de caracteres que a palavra ${solicitarTexto} tem é de ${caracteres} letras!`);
 //40. Crie uma função que receba um preço e retorne com 5% de imposto adicionado.
+let solicitarPreco = parseFloat(prompt('Insira o preço do produto:'));
+let precoFinal = adicionarImposto(solicitarPreco);
+function adicionarImposto(preco, ){
+    return preco + (preco * 0.05);
+}
+alert(`O valor final com 5% de imposto adicionado ao produto é de ${precoFinal.toFixed(2)}`);
 //41. Crie uma função que receba dois textos e retorne a concatenação deles com espaço.
+let pedirPalavra1 = prompt('Digite qualquer palavra:');
+let pedirPalavra2 = prompt('Digite outra palavra:');
+let unir = concatenarPalavras(pedirPalavra1, pedirPalavra2);
+function concatenarPalavras(palavra01, palavra02){
+    return palavra01 + "" + palavra02;
+}
+alert(unir);
 //42. Crie uma função que retorne o maior valor entre três números passados como parâmetros.
+let numero01 = parseInt(prompt('Digite o primeiro número'));
+let numero02 =parseInt(prompt('Digite o segundo número'));
+let numero03 = parseInt(prompt('Digite o terceiro número'));
+let numeroMaior = descobrirNumeroMaior(numero01, numero02, numero03);
+function descobrirNumeroMaior(numero1,numero2,numero3){
+    if(numero1 >= numero2 && numero1 >= numero3){
+        return numero1;
+    }else if(numero2 >= numero3 && numero2 >= numero1){
+        return numero2;
+    }else{
+        return numero3;
+    }
+}
+alert(`O número maior entre os valores inseridos é ${numeroMaior}`);
 //43. Crie uma função para converter minutos em segundos.
+let minutos = parseInt(prompt('Insira quantos minutos queira converter para segundos:'));
+let converter = converterMinutosParaSegundos(minutos);
+function converterMinutosParaSegundos(tempoMinutos){
+    return tempoMinutos * 60;
+}
+alert(`A converção de minutos inseridos em segundos é: ${converter}`)
 //44. Crie uma função que verifique se um número é múltiplo de 5.
+let numeroQualquer = parseInt(prompt('Digite um número para começar a brincadeira:'));
+let verificar = verificarNumeroMultiplo(numeroQualquer);
+function verificarNumeroMultiplo(numeroMultiploQualquer){
+    return numeroMultiploQualquer % 5 ==0;
+}
+if(verificar){
+    alert(`O número ${numeroQualquer} é múltiplo por 5`);
+}else{
+    alert(`O número ${numeroQualquer} não é múltiplo por 5`);
+}
 //45. Crie uma função que receba o preço original e a porcentagem de desconto e retorne o valor final.
+let solicitarPrecoDeCompra = parseFloat(prompt('Insira o valor do produto:'));
+let desconto = parseFloat(prompt('Insira o valor de desconto do produto:'));
+let taxaDecimal = converterParaDecimal(desconto);
+let valorFinalComDesconto = calcularValorFinal(solicitarPrecoDeCompra, taxaDecimal);
+function converterParaDecimal(taxa){
+    return taxa / 100;
+}
+function calcularValorFinal(compra, descontoProduto){
+    return compra - (compra * descontoProduto);
+}
+alert(`O valor final de sua compra é : ${valorFinalComDesconto}`);
