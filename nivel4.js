@@ -42,11 +42,54 @@ function tabuada(numeroSolicitado){
 }
 alert(resultadoDaMultiplicacao);
 //50. Calcule a soma de todos os números inteiros de 1 a 100 usando um laço.
+let soma = 0;
+for(let nu = 1; nu <= 100; nu++){
+     soma = soma + nu;
+     console.log(`A soma de 1 a 100 é: ${soma}`);
+
+}
 //51. Crie uma função para calcular o fatorial de um número recebido por parâmetro.
+let numeroParaCalcularFatorial = parseInt(prompt('Digite um número'));
+let resultadoFatorial = calcularFatorial(numeroParaCalcularFatorial);
+function calcularFatorial(nufato){
+    let resul = 1;
+    for(let conta = nufato; conta >= 1; conta--){
+        resul = resul * conta
+    }
+    return resul;
+}
+alert(`O fatorial de ${numeroParaCalcularFatorial} é ${resultadoFatorial}`);
 //52. Exiba todos os números pares entre 1 e 50.
+let numeroPar = 1;
+
+while(numeroPar <= 50){
+    if(numeroPar % 2 ==0){
+        console.log(numeroPar);
+    }
+    numeroPar++;
+    
+}
 //53. Exiba todos os números ímpares entre 1 e 50.
+for(let numeroImpar = 1; numeroImpar <= 50; numeroImpar++){// da para colocar numeroImpar +=2, para não colocar o if, ai o código vai saltar de dois em dois e retornando o mesmo resultado
+    if(numeroImpar % 2 == 1){
+        console.log(numeroImpar);
+    }
+}
 //54. Crie uma função que receba $N$ e retorne a soma de todos os números pares de 1 até $N$.
+let solicitarNumeroIndefinido = parseInt(prompt('Digite um número para começar:'));
+let resultadoSoma = calcularNumeroIndefinido(solicitarNumeroIndefinido);
+function calcularNumeroIndefinido(nume){
+    let soma = 0;
+    for(let numero = 1; numero <= nume; numero++){
+        if(numero % 2 ==0){
+            soma += numero;// guarda o numero par dentro da variavel soma "cofre"
+        } 
+    }
+    return soma;
+}
+ alert(resultadoSoma);
 //55. Escreva um algoritmo que conte quantos números negativos existem em uma sequência dada.
+
 //56. Crie um laço que continue pedindo uma confirmação até que o usuário digite "sim".
 //57. Calcule a média de 5 números digitados pelo usuário acumulando o valor em um laço.
 //58. Crie um laço para gerar os primeiros 10 números da sequência de Fibonacci.
