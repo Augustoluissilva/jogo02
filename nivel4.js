@@ -89,7 +89,18 @@ function calcularNumeroIndefinido(nume){
 }
  alert(resultadoSoma);
 //55. Escreva um algoritmo que conte quantos números negativos existem em uma sequência dada.
-
+let quantidadeNumeros = [-10, 9, -5, 6, -20, -17, 1, 5, -2, 3];
+let totalNumerosNegativos = 0;
+for(let contadorNumerosNegativos = 0; contadorNumerosNegativos < quantidadeNumeros.length; contadorNumerosNegativos++){
+    if(quantidadeNumeros[contadorNumerosNegativos] < 0){
+        totalNumerosNegativos++;
+    }
+}
+if(totalNumerosNegativos >0){
+    alert(`O total de  números negativos na lista  são: ${totalNumerosNegativos}`);
+}else{
+    alert('Não há números negativos.')
+}
 //56. Crie um laço que continue pedindo uma confirmação até que o usuário digite "sim".
 //57. Calcule a média de 5 números digitados pelo usuário acumulando o valor em um laço.
 //58. Crie um laço para gerar os primeiros 10 números da sequência de Fibonacci.
