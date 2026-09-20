@@ -46,8 +46,14 @@ let solicitarReais = parseFloat(prompt('Informe o valor que deseja fazer a conve
 let valorDolar = calcularDolar(cotacao, solicitarReais);
 function calcularDolar(cotacaoMoeda, valorReais){
     return valorReais / cotacaoMoeda;
+
 }
-alert(`O valor da cotação é de ${valorDolar.toFixed(2)}`);
+if(valorDolar < 1){
+    let centavos = Math.round(valorDolar * 100);
+    alert(`O valor da cotação é de ${centavos} cents`);
+}else{
+    alert(`O valor da cotação é de ${valorDolar.toFixed(2)}`);
+}
 //37. Crie uma função que receba 3 notas e retorne a média.
 let nota1 = parseFloat(prompt('Insira a primeira nota do aluno:'));
 let nota2 = parseFloat(prompt('Insira a segunda do aluno:'));
